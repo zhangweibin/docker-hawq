@@ -46,17 +46,11 @@ init() {
     export PXF_HOME=${GPHOME}/pxf
 
     export BASEDIR=/data
-    export HAWQSITE_CONF=${GPHOME}/etc/hawq-site.xml
     export HOME=/home/gpadmin
     export JAVA_HOME=/etc/alternatives/java_sdk
-    export LD_LIBRARY_PATH=${GPHOME}/lib:/${GPHOME}/lib:/usr/local/lib:
-    export LIBHDFS3_CONF=${GPHOME}/etc/hdfs-client.xml
-    export LIBYARN_CONF=${GPHOME}/etc/yarn-client.xml
     export NAMENODE=${NAMENODE}
-    export OPENSSL_CONF=${GPHOME}/etc/openssl.cnf
     export PATH=/${GPHOME}/bin:/${GPHOME}/bin:/usr/lib64/qt-3.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
     export PWD=/data
-    export PYTHONPATH=/${GPHOME}/lib/python:/${GPHOME}/lib/python:
     export USER=gpadmin
 
     sudo passwd -d gpadmin
