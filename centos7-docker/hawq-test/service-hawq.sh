@@ -23,12 +23,12 @@ build() {
     cd /data/hawq
     echo "Checking out branch 2.4.0.0 to build"
     git checkout 2.4.0.0
-    export LD_LIBRARY_PATH=/usr/local/lib 
     ./configure --prefix=${HAWQ_HOME}
     # make -j16
     make
     make install
 
+    sudo sed 's|LD_LIBRARY_PATH=|LD_LIBRARY_PATH=/usr/local/lib:|g' -i ${HAWQ_HOME}/greenplum_path.sh
     source ${HAWQ_HOME}/greenplum_path.sh
 
     sudo sed 's|localhost|centos7-namenode|g' -i ${GPHOME}/etc/hawq-site.xml
